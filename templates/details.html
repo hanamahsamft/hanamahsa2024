@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+{% block title %}
+index
+{% endblock %}
+{% block bg_color %}lightpink{% endblock%}
+{% block content %}
+<a href="{{ url_for('delete',id=s.id)}}" class="btn btn-info">Delete</a>
+<a href="{{ url_for('update',id=s.id)}}" class="btn btn-danger">Update</a>
+<a href="{{ url_for('index') }}" class="btn btn-success">Go back</a>
+<h2> {{s.name}}</h2>
+<p> {{s.email}} </p>
+{% endblock %}
